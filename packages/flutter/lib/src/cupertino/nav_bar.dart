@@ -1391,6 +1391,7 @@ class _BackChevron extends StatelessWidget {
           package: CupertinoIcons.back.fontPackage,
         ),
       ),
+      textScaleFactor: 1.0,
     );
     switch (textDirection) {
       case TextDirection.rtl:
@@ -1430,12 +1431,16 @@ class _BackLabel extends StatelessWidget {
 
     Text textWidget = Text(
       previousTitle,
+      textScaleFactor: 1.0,
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
     );
 
     if (previousTitle.length > 12) {
-      textWidget = const Text('Back');
+      textWidget = const Text(
+        'Back',
+        textScaleFactor: 1.0,
+      );
     }
 
     return Align(
